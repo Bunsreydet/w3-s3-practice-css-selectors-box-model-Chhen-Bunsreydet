@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#DFA3FF 0%, #77A5F8 100%);
+    
+}
+.card-container
+{
+    width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+}
+.card-container header
+{
+   display: flex;
+   align-items: center;
+   height: 55px;
+   border: 1px solid #ccc;
+   border-radius: 30px;
+}
+.profile-card
+{
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+}
+
+.profile-card .img-box
+{
+    max-width: 150px;
+    margin: auto;
+    
+}
+
+.profile-card .img-box img
+{
+    border-radius: 230%;
+    width: 110%;
+    vertical-align: middle;
+}
+.profile-card .info
+{
+    margin-top: 20px;
+}
+.profile-card .info h1
+{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 26px;
+}
+.profile-card .ifo p
+{
+    text-transform: capitalize;
+}
+.profile-card .number
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+.profile-card .number h2
+{
+    font-size: 22px;
+}
+.profile-card .number p
+{
+    text-transform: capitalize;
+}
+.profile-card .btns
+{
+    margin-top: 20px;
+}
+.profile-card .btns .btn
+{
+    margin: 10px;
+}
+.btns{
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: 16px;
+    vertical-align: middle;
+    user-select: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: 1px solid transparent;
+    
+}
+html, body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(1.5);
+}
+.btn
+{
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: purple;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.btn::after
+{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hotpink;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    
+}
+
+.btn::before
+{
+   content: "";
+   background: linear-gradient(45deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000);
+   position: absolute;
+   top: -2px;
+   left: -2px;
+   background-size: 600%;
+   z-index: -1;
+   width: calc(100% + 4px);
+   height: calc(100% + 4px);
+   filter: blur(8px);
+   animation:glowing 20s linear infinite;
+   transition: opacity .3s ease-in-out;
+   border-radius: 10px;
+   opacity: 1;
+
+}
+@keyframes glowing
+{
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+} 
+.btn:hover::before
+{
+    opacity: 1;
+}
+.btn:active:after
+{
+    background:transparent;
+}
+    
